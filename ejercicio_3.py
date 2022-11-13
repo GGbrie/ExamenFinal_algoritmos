@@ -14,17 +14,17 @@ namespace turnosdetrabajadores
         public void Cargar() 
         {
             string linea;
-            turnoMan=new float[4];
-            turnoTar=new float[4];
+            turnoMan=new float[6];
+            turnoTar=new float[2];
             Console.WriteLine("----- Los Sueldos de los Empleados de la Mañana -----");
-            for(int a = 0; a < 4; a++) 
+            for(int a = 0; a < 6; a++) 
             {
                 Console.Write("Ingrese su sueldo:");
                 linea = Console.ReadLine();              
                 turnoMan[a]=float.Parse(linea);
             }
             Console.WriteLine("----- Los Sueldos de los Empleados de la Tarde -----");
-            for(int a = 0; a < 4; a++) 
+            for(int a = 0; a < 2; a++) 
             {
                 Console.Write("Ingrese su sueldo:");
                 linea = Console.ReadLine();              
@@ -36,7 +36,7 @@ namespace turnosdetrabajadores
         {
             float man=0;
             float tar=0;
-            for(int a = 0; a < 4; a++)
+            for(int a = 0; a < 2; a++)
             {
                 man=man+turnoMan[a];
                 tar=tar+turnoTar[a];
